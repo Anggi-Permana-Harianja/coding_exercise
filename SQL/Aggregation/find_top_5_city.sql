@@ -8,6 +8,7 @@
 
 SELECT city, COUNT(1) AS cnt
 FROM yelp_business
+WHERE stars = 5
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5
