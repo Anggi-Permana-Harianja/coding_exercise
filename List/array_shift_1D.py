@@ -1,5 +1,8 @@
 #Link:https://www.youtube.com/watch?v=nJYFh4Dl-as
 
+#Time: O(N)
+#Space: O(N)
+
 def shift_array(array, shift):
     result_array = [0] * len(array)
     for i in range(len(array)):

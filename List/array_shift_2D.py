@@ -1,5 +1,8 @@
 #Link:https://www.youtube.com/watch?v=nJYFh4Dl-as
 
+#Time: O(M * N)
+#Space: O(M * N)
+
 def shift_array(array, shift):
     #flattend the array
     flat_array = [val for sublist in array for val in sublist]

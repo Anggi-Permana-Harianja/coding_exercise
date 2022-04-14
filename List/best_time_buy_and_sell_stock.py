@@ -11,6 +11,9 @@
 
 #HINT: Use Kadane algorithm
 
+#Time: O(N)
+#Space: O(1)
+
 def max_profit(prices:list[int]) -> int:
     max_profit = 0
     min_value = float('inf')
