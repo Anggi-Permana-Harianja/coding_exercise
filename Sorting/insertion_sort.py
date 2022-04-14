@@ -1,4 +1,8 @@
 #Link: https://www.algoexpert.io/questions/Insertion%20Sort
+
+#Time: O(n^2)
+#Space: O(1)
+
 def insertion_sort(array:list[int]) -> list[int]:
     curr_idx = 0
     while curr_idx < len(array):

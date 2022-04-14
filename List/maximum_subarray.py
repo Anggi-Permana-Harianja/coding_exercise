@@ -9,6 +9,9 @@
 
 #HINT: This question can be solved using Kadane algorithm
 
+#Time: O(N)
+#Space: O(1)
+
 def max_subarray(nums:list[int]) -> int:
     largest_so_far = nums[0]
     largest = largest_so_far
