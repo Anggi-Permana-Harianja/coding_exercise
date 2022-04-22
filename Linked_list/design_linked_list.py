@@ -11,7 +11,7 @@ class LinkedList:
         self.size = 0
         self.head = ListNode(0)
         
-    def get(self, index:int)->int:
+    def get(self, index:int) -> int:
         #sanity check
         if index < 0 or index >= self.size:
             return -1 #not found
@@ -22,7 +22,7 @@ class LinkedList:
             
         return curr_node.val
     
-    def add_at_index(self, index:int, val:int)->None:
+    def add_at_index(self, index:int, val:int) -> None:
         #sanity check
         if index > self.size:
             return 
@@ -42,7 +42,7 @@ class LinkedList:
         #update size
         self.size += 1
         
-    def delete_at_index(self, index:int)->None:
+    def delete_at_index(self, index:int) -> None:
         #sanity check
         if index < 0 or index >= self.size:
             return 
@@ -56,23 +56,23 @@ class LinkedList:
         #update size
         self.size -= 1
         
-    def add_at_head(self, val:int)->None:
+    def add_at_head(self, val:int) -> None:
         
         return self.add_at_index(0, val)
     
-    def add_at_tail(self, val:int)->None:
+    def add_at_tail(self, val:int) -> None:
         
         return self.add_at_index(0, self.size)
     
-    def delete_at_head(self)->None:
+    def delete_at_head(self) -> None:
         
         return self.delete_at_index(0)
     
-    def delete_at_tail(self)->None:
+    def delete_at_tail(self) -> None:
         
         return self.delete_at_index(self.size)
     
-    def print_linkedlist(self)->list:
+    def print_linkedlist(self) -> str:
         str_ = ''
         curr_node = self.head
         for index in range(self.size):
