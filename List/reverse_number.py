@@ -1,5 +1,8 @@
 #Link: https://www.geeksforgeeks.org/write-a-program-to-reverse-digits-of-a-number/
 
+#Time: O(length of N)
+#Space: O(1)
+
 def reverse_number(num: int) -> int:
     rem = 0
     
