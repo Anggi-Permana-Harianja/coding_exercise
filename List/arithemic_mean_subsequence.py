@@ -13,7 +13,7 @@ def mean_subsequence(array: list, mean: int) -> int:
             subsequent = powerset[i]
             #check the mean
             tmp = [num] + subsequent
-            if tmp != [] and sum(tmp) / len(tmp) == mean:
+            if sum(tmp) / len(tmp) == mean:
                 result += 1
             #update power set
             powerset.append([num] + subsequent)
