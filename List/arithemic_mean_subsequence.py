@@ -1,7 +1,7 @@
 #Link: Originally asked by Codility (https://stackoverflow.com/questions/63068610/finding-arithmetic-mean-of-subarrays-efficiently-in-an-array)
 
-#Time: O(N)
-#Space: O(2 ^ N)
+#Time: O(N * 2 ^ N)
+#Space: O(N * 2 ^ N)
 
 def mean_subsequence(array: list, mean: int) -> int:
     result = 0
