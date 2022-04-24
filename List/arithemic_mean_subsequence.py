@@ -1,7 +1,7 @@
 #Link: Originally asked by Codility (https://stackoverflow.com/questions/63068610/finding-arithmetic-mean-of-subarrays-efficiently-in-an-array)
 
-#Time: O(N)
-#Space: O(2 ^ N)
+#Time: O(N * 2 ^ N)
+#Space: O(N * 2 ^ N)
 
 def mean_subsequence(array: list, mean: int) -> int:
     result = 0
@@ -13,7 +13,7 @@ def mean_subsequence(array: list, mean: int) -> int:
             subsequent = powerset[i]
             #check the mean
             tmp = [num] + subsequent
-            if tmp != [] and sum(tmp) / len(tmp) == mean:
+            if sum(tmp) / len(tmp) == mean:
                 result += 1
             #update power set
             powerset.append([num] + subsequent)
