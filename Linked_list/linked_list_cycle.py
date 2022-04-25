@@ -1,5 +1,8 @@
 #Link: https://leetcode.com/problems/linked-list-cycle/
 
+#Time: O(N)
+#Space: O(1)
+
 class ListNode:
     def __init__(self, val):
         self.val = val
