@@ -19,7 +19,7 @@ class Solution:
         
         return self.helper(result, curr_node, level)
     
-    def helper(self, result, curr_node, level):
+    def helper(self, result: list, curr_node: TreeNode, level: int) -> list[list[int]]:
         if not curr_node:
             return 
         
@@ -35,6 +35,7 @@ class Solution:
             self.helper(result, curr_node.right, level=level+1)
             
         return result
+            
     
 import unittest
 class TestProgram(unittest.TestCase):
