@@ -17,9 +17,11 @@ def helper_function(i: int, array: list, permutations: list) -> None:
             swap(array, i, j)
             helper_function(i + 1, array, permutations)
             swap(array, i, j)
-            
+
 def swap(array, i, j):
     array[i], array[j] = array[j], array[i]
+    
+    
 
     
 import unittest
