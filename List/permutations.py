@@ -20,10 +20,7 @@ def helper_function(i: int, array: list, permutations: list) -> None:
 
 def swap(array, i, j):
     array[i], array[j] = array[j], array[i]
-    
-    
-
-    
+        
 import unittest
 class TestProgram(unittest.TestCase):
     def test_program1(self):
