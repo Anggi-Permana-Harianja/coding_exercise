@@ -1,6 +1,5 @@
 '''
-https://leetcode.com/problems/richest-customer-wealth/submissions/
-
+https://leetcode.com/problems/richest-customer-wealth/
 Time: O(M * N)
 Space: O(1) -> because we only track max_wealth and current_wealth
 

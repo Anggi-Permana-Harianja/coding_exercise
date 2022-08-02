@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/running-sum-of-1d-array/submissions/
+https://leetcode.com/problems/running-sum-of-1d-array/
 
 Time: O(N)
 Space: O(1)
