@@ -1,5 +1,5 @@
 '''
-https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/solution/
+https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
 
 Time: O(log N)
 Space: O(1)
