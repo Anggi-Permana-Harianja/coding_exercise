@@ -2,13 +2,13 @@
 https://leetcode.com/problems/remove-element/
 
 Time: O(N)
-Space: O(1) since only keep counting the un-removed elements
+Space: O(1) since we compute in-place
 
 Hint:
     - Using two pointers
 '''
 
-def remove_element(nums: list[int], val: int) -> int:
+def remove_element(nums: list[int], val: int) -> list[int]:
     first_idx = 0
     second_idx = 0
     
