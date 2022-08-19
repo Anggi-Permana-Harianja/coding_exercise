@@ -6,6 +6,8 @@ Space: O(N) we keep track all nodes
 
 Hint:
     - DFS
+    - pay attention of pop(), it made the list pop in right first
+    - This particular solution is iterative but you can have recursive too
 '''
 
 from typing import Optional, List
@@ -24,14 +26,13 @@ class Solution:
         stack, result = [root], []
         
         while stack:
-            curr_node = stack.pop(0)
+            curr_node = stack.pop()
             if curr_node:
                 result.append(curr_node.val)
-                if curr_node.left:
-                    stack.append(curr_node.left)
-                if curr_node.right:
-                    stack.append(curr_node.right)
-                    
+            if curr_node.right:
+                stack.append(curr_node.right)
+            if curr_node.left:
+                stack.append(curr_node.left)
         return result
     
 import unittest
@@ -60,8 +61,24 @@ class TestProgram(unittest.TestCase):
         
         self.assertEqual(solution.preorder_traversal(root), result)
         
+    def test_program3(self):
+        root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(3)
         
-
+        root.left.left = TreeNode(4)
+        root.left.right = TreeNode(5)
+        
+        root.right.left = TreeNode(6)
+        root.right.right = TreeNode(7)
+        
+        solution = Solution()
+        
+        result = [1, 2, 4, 5, 3, 6, 7]
+        
+        self.assertEqual(solution.preorder_traversal(root), result)
+        
+        
 if __name__ == '__main__':
     unittest.main()
         
