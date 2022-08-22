@@ -1,5 +1,11 @@
 '''
+https://leetcode.com/problems/binary-tree-inorder-traversal/
 
+Time: O(N)
+Space: O(N)
+
+Hint:
+    - This approach is iterative one
 '''
 
 from typing import Optional, List
