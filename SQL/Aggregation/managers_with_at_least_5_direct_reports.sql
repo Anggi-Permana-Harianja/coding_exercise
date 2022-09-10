@@ -8,6 +8,5 @@ WITH manager AS (
 )
 
 SELECT e.name AS 'name'
-FROM Employee AS e
-LEFT JOIN manager AS m on e.id = m.managerId
+FROM Employee AS e LEFT JOIN manager AS m on e.id = m.managerId
 WHERE e.id = m.managerId
