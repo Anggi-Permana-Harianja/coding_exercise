@@ -6,7 +6,9 @@
 --Output the city name along with the number of 5-star businesses.
 --Order records by the number of 5-star businesses in descending order.
 
-SELECT city, COUNT(1) AS cnt
+SELECT 
+    city, 
+    COUNT(1) AS cnt
 FROM yelp_business
 WHERE stars = 5
 GROUP BY 1

@@ -3,7 +3,8 @@
 -- Hint:
 --   - Use GROUP_CONCAT to concat values in same group
 
-SELECT sell_date AS 'sell_date', 
+SELECT 
+    sell_date AS 'sell_date', 
     COUNT(DISTINCT product) AS 'num_sold',
     GROUP_CONCAT(DISTINCT product) AS 'products'
 FROM Activities
