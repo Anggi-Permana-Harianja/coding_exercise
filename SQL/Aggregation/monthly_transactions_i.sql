@@ -6,8 +6,7 @@ SELECT
     COUNT(1) AS 'trans_count',
     SUM(t.state = 'approved') AS 'approved_count',
     SUM(t.amount) AS 'trans_total_amount',
-    SUM(
-        CASE
+    SUM(CASE
             WHEN t.state = 'approved' THEN t.amount
             ELSE 0
         END) AS 'approved_total_amount'
