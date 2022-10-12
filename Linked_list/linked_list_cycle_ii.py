@@ -82,5 +82,18 @@ class TestProgram(unittest.TestCase):
         
         self.assertEqual(solution.detect_cycle(head), result)
         
+    def test_program3(self):
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next.next = ListNode(3)
+        
+        solution = Solution()
+        
+        result = None
+        
+        #print(result, solution.detect_cycle(head))
+        
+        self.assertEqual(solution.detect_cycle(head), result)
+        
 if __name__ == '__main__':
     unittest.main()
