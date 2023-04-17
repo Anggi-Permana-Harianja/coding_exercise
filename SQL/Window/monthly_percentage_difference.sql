@@ -4,7 +4,7 @@ WITH cte AS (
     SELECT 
         TO_CHAR(CAST(created_at AS DATE), 'YYYY-MM') AS year_month,
         SUM(value) AS curr_revenue,
-        LAG(SUM(value), 1) OVER w AS prev_revenue
+        SUM(value) - value OVER w AS prev_revenue
     FROM sf_transactions
     GROUP BY 1
     WINDOW w AS (ORDER BY TO_CHAR(CAST(created_at AS DATE), 'YYYY-MM'))
