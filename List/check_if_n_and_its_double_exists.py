@@ -10,19 +10,12 @@ Hint:
 '''
 
 def check_if_exists(arr: list[int]) -> bool:
-    dict_ = {}
-    
-    ''' if 0 appreas multiple times, it definitely a True since 0 * 2 = 0 '''
-    if arr.count(0) > 1:
-        return True
-    
-    ''' if a numbers appears multiple times, does not mean it was multiple by 2 '''
-    arr = set(arr)
+    seen = set()
+
     for num in arr:
-        mul_num = num * 2
-        if mul_num in dict_.keys() or num in dict_.values():
+        if num * 2 in seen or num / 2 in seen:
             return True
-        dict_[num] = mul_num
+        seen.add(num)
         
     return False
 
