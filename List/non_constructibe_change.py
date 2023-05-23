@@ -1,27 +1,20 @@
 #Link: https://www.algoexpert.io/questions/Non-Constructible%20Change
 
-#Time: O(n log n)
+#Time: O(n log n) because of sort
 #Space: O(1)
 
 #Hint: Sort the array first
 
 def non_constuctible_change(coins: list) -> int:
-    if not coins:
-        return 1
-    
-    if len(coins) == 1 and coins[0] > 1:
-        return 1
-    elif len(coins) ==  1 and coins[0] == 1:
-        return 2
-    
     coins.sort()
-    
-    for i in range(len(coins) - 1):
-        diff = coins[i + 1] - sum(coins[: i + 1])
-        if diff > 1:
-            return sum(coins[: i + 1]) + 1
-        
-    return sum(coins) + 1
+    min_change = 0
+
+    for denom in coins:
+        if denom > min_change + 1:
+            return min_change + 1
+        min_change += denom
+
+    return min_change + 1
 
 import unittest 
 class TestProgram(unittest.TestCase):

@@ -12,11 +12,11 @@ def find_max_consecutive_ones(nums: list[int]) -> int:
     max_consecutive = 0
     
     for num in nums:
-        if num == 0:
-            max_consecutive = max(max_consecutive, current_consecutive)
-            current_consecutive = 0
-        else:
+        if num == 1:
             current_consecutive += 1
+            max_consecutive = max(max_consecutive, current_consecutive)
+        else:
+            current_consecutive = 0
             
     return max(max_consecutive, current_consecutive)
 

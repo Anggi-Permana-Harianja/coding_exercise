@@ -26,14 +26,14 @@ def max_subarray(nums:list[int]) -> int:
 import unittest
 class TestProgram(unittest.TestCase):
     def test_program1(self):
-        nums = [-2,1,-3,4,-1,2,1,-5,4]
+        nums = [-2,1,-3,4,-1,2,1,-5,4] # [4,-1,2,1]
         
         result = 6
         
         self.assertEqual(max_subarray(nums), result)
         
     def test_program2(self):
-        nums = [1, 2, 3, -5]
+        nums = [1, 2, 3, -5] # [1, 2, 3]
         
         result = 6
         
