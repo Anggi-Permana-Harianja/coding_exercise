@@ -1,3 +1,10 @@
+"""
+Check whether given str of bracket is well balance
+
+Time: O(N)
+Space: O(N)
+"""
+
 def well_balance(brackets: str) -> bool:
     # set the pairs
     dict_ = {
