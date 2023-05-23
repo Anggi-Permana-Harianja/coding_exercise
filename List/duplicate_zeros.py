@@ -5,30 +5,38 @@ Time: O(N)
 Space: O(1) because the constraint of this question is to have in-place computing
 
 hint: 
+    - expand the array
     - loop backwards
-    - if idx + shift < len(arr) then shift it to rightmost
+    - simple use of copy
 '''
 
-def duplicate_zeros(arr: list[int]) -> list[int]:
-    shift = 0
-    len_ = len(arr)
+def duplicate_zeros(array: list[int]) -> list[int]:
+    len_ = len(array)
+    zeros_count = array.count(0)
+    final_len = len_ + zeros_count
+
+    last_index = len_ - 1
+    final_index = final_len - 1
+
+    # expand the array
+    if final_len > len_:
+        array[len_:] = array + ([0] * zeros_count)
     
-    ''' count possible shift by count 0 appearances '''
-    for num in arr:
-        if num == 0:
-            shift += 1
-            
-    for i in range(len_ - 1, -1, -1):
-        ''' shift to rightmost if possible '''
-        if i + shift < len_:
-            arr[i + shift] = arr[i]
-        ''' if meet 0, shift to rightmost by adding 0 if possible, substract shift '''
-        if arr[i] == 0:
-            shift -= 1
-            if i + shift < len_:
-                arr[i + shift] = 0
-                
-    return arr
+    # slide backwards
+    while last_index != final_index and zeros_count >= 0:
+        # copy value == 0 and slide backwards, substract count_zeros
+        if array[last_index] == 0:
+            array[final_index] = 0
+            final_index -= 1
+            zeros_count -= 1
+
+        # copy value from last_index to final_index
+        array[final_index] = array[last_index]
+        final_index -= 1
+        last_index -= 1
+
+    # return only neccesary length
+    return array[:len_]
                 
 import unittest
 
