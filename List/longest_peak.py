@@ -1,37 +1,37 @@
-#Link: https://www.algoexpert.io/questions/Longest%20Peak
+"""
+Link: https://www.algoexpert.io/questions/Longest%20Peak
 
-#Time: O(n)
-#Space: O(1)
+Time: O(n)
+Space: O(1)
+"""
 
 def longest_peak(array: list) -> int:
     longest_peak = 0
-    if len(array) < 3:
-        return 0
-    if len(array) == 3 and array.index(max(array)) == 1:
-        return 1
-    
-    #finding peak
-    for i in range(1, len(array) - 1):
-        if array[i - 1] < array[i] and array[i] > array[i + 1]:
-            peak_idx = i
-            curr_peak = 1
+    n = len(array)
+    i = 1 # start from 1st 
+
+    while i < n - 1:
+        # check if there is mountain
+        if array[i - 1] < array[i] > array[i + 1]:
+            left = i - 1
+            right = i + 1
             
-            #expand left-side
-            for k in range(peak_idx, 0, -1):
-                if array[k] > array[k - 1]:
-                    curr_peak += 1
-                else:
-                    break
-                    
-            #expand right-side
-            for j in range(peak_idx + 1, len(array)):
-                if array[j - 1] > array[j]:
-                    curr_peak += 1
-                else:
-                    break
+            # slide to the left, substract left
+            while left > 0 and array[left] > array[left - 1]:
+                left -= 1
+
+            # slide to the right, add right
+            while right < n - 1 and array[right] > array[right + 1]:
+                right += 1
             
-            longest_peak = max(longest_peak, curr_peak)
-            
+            # check the longest peak
+            longest_peak = max(longest_peak, right - left + 1) # note why we decrease left and increase right
+
+            # move i to potential peak
+            i = right
+        else:
+            i += 1
+
     return longest_peak
 
 import unittest
@@ -56,6 +56,13 @@ class TestProgram(unittest.TestCase):
         result = 9
         
         self.assertEqual(longest_peak(array), result)
+
+    def test_program4(self):
+        array = [2,1,4,7,3,2,5]
         
+        result = 5
+        
+        self.assertEqual(longest_peak(array), result)
+
 if __name__ == '__main__':
     unittest.main()
