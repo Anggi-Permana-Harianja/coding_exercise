@@ -5,40 +5,21 @@ Time: O(N)
 Space: O(1) because in-place computation
 
 Hint:
-    - count zero appearances
-    - do in two parts: 
-        - move non-zeros to left
-        - replace rightmost with zeros
-    - be careful with edge cases
+    - use two pointers
+    - swap
 '''
 
 def move_zeros(nums: list[int]) -> list[int]:
-    if len(nums) == 1:
-        return nums
-    
     first_idx = 0
     second_idx = 0
-    len_ = len(nums) - 1
-    
-    ''' count zero appearances '''
-    cnt_null = nums.count(0)
-    if cnt_null == 0:
-        return nums
-    
-    ''' move non-zeros to left '''
-    while second_idx <= len_:
+
+    while second_idx < len(nums):
         if nums[second_idx] != 0:
-            nums[first_idx] = nums[second_idx]
+            # swap
+            nums[first_idx], nums[second_idx] = nums[second_idx], nums[first_idx]
             first_idx += 1
         second_idx += 1
-    
-    ''' replace rightmost with zeros '''
-    i = 0
-    while cnt_null > 0:
-        nums[len_ - i] = 0
-        i += 1
-        cnt_null -= 1
-        
+
     return nums
 
 import unittest
