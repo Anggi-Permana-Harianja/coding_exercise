@@ -1,7 +1,9 @@
-#Link: https://www.algoexpert.io/questions/Longest%20Peak
+"""
+Link: https://www.algoexpert.io/questions/Longest%20Peak
 
-#Time: O(n)
-#Space: O(1)
+Time: O(n)
+Space: O(1)
+"""
 
 def longest_peak(array: list) -> int:
     longest_peak = 0
