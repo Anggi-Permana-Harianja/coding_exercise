@@ -33,15 +33,15 @@ def rain_trap(heights: list[int]) -> int:
     left_max = right_max = water_trap = 0
 
     while left < right:
-        # compute for left hand side pointer
+        # compute on left hand side, starts if left is lower than right
         if heights[left] < heights[right]:
-            # check if can hold the water
+            # compute how much water can be hold
             if heights[left] > left_max:
                 left_max = heights[left]
             else:
                 water_trap += left_max - heights[left]
             left += 1
-        # the right hand side is same computation
+        # compute the same thing for right hand side
         else:
             if heights[right] > right_max:
                 right_max = heights[right]
