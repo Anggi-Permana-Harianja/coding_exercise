@@ -13,27 +13,28 @@ class Node:
         self.right = None
         
 class Solution:
-    def has_path_sum(self, root, targetSum:int)->bool:
+    def has_path_sum(self, root: Node, target_sum: int) -> bool:
         running_sum = 0
-        has_path = self.has_path_sum_helper(root, running_sum, targetSum)
-        
+        has_path = self.has_path_sum_helper(root, running_sum, target_sum)
+
         return has_path
     
-    def has_path_sum_helper(self, root, running_sum, targetSum)->bool:
+    def has_path_sum_helper(self, root: Node, running_sum: int, target_sum: int) -> bool:
         curr_node = root
-        
         if not curr_node:
             return False
         
+        # calculate running_sum
         running_sum += curr_node.val
-        
+
+        # check exit condition 
         if not curr_node.left and not curr_node.right:
-            if running_sum == targetSum:
-                return True
-            
-        left_nodes = self.has_path_sum_helper(curr_node.left, running_sum, targetSum)
-        right_nodes = self.has_path_sum_helper(curr_node.right, running_sum, targetSum)
+            return running_sum == target_sum
         
+        # traverse the rest of tree
+        left_nodes = self.has_path_sum_helper(curr_node.left, running_sum, target_sum)
+        right_nodes = self.has_path_sum_helper(curr_node.right, running_sum, target_sum)
+
         return left_nodes or right_nodes
     
 import unittest

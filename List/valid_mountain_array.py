@@ -13,6 +13,7 @@ def valid_mountain(arr: list[int]) -> bool:
     if len(arr) < 3:
         return False
     
+    # get the location of the peak
     max_idx = arr.index(max(arr))
     
     ''' edge cases where there is no valley or no mountain '''
