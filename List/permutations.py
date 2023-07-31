@@ -1,7 +1,11 @@
-#Link: https://www.algoexpert.io/questions/Permutations
+"""
+Blind 75
 
-#Time: O(n * n!)
-#Space: O(n * n !)
+Link: https://www.algoexpert.io/questions/Permutations
+
+Time: O(n * n!)
+Space: O(n * n !)
+"""
 
 def get_permutations(array: list) -> list:
     permutations = []
