@@ -1,4 +1,6 @@
 """
+Blind 75
+
 Check whether given str of bracket is well balance
 
 Time: O(N)
