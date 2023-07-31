@@ -19,6 +19,7 @@ Output: 9
 hint: 
     - use two pointers
     - it uses simple sliding window
+    - keep track left_max and right_max values
 
 Time: O(N)
 Space: O(N)
@@ -57,12 +58,18 @@ class TestProgram(unittest.TestCase):
     def test_case1(self):
         heights = [0,1,0,2,1,0,1,3,2,1,2,1]
 
-        self.assertEqual(rain_trap(heights), 6)
+        return self.assertEqual(rain_trap(heights), 6)
 
     def test_case2(self):
         heights = [4,2,0,3,2,5]
 
-        self.assertEqual(rain_trap(heights), 9)
+        return self.assertEqual(rain_trap(heights), 9)
+    
+    def test_case3(self):
+        heights = [4, 3, 2, 1, 5, 2, 0, 1]
+
+        return self.assertEqual(rain_trap(heights), 7)
+
 
 if __name__ == "__main__":
     unittest.main() 
