@@ -1,7 +1,10 @@
 """
+Blind 75
+
 https://leetcode.com/problems/merge-two-sorted-lists/
 
-
+Time: O(M + N)
+Space: O(M + N)
 """
 from typing import Optional
 import unittest
