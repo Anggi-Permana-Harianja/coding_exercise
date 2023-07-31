@@ -1,7 +1,11 @@
-#Link: https://www.algoexpert.io/questions/Powerset
+"""
+Blind 75 
 
-#Time: O(N * 2 ^ N)
-#Space: O(N * 2 ^ N)
+Link: https://www.algoexpert.io/questions/Powerset
+
+Time: O(N * 2 ^ N)
+Space: O(N * 2 ^ N)
+"""
 
 def powerset(array: list) -> list:
     result = [[]]
