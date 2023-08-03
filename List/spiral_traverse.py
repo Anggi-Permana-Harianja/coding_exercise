@@ -1,10 +1,16 @@
-#Link: https://www.algoexpert.io/questions/Spiral%20Traverse
+"""
+Blind 75
 
-#Time: O(n)
-#Space: O(n)
+Link: https://www.algoexpert.io/questions/Spiral%20Traverse
+https://leetcode.com/problems/spiral-matrix/
 
-#Hint: - Use 4 loops (move right, go down, move left, go up)
-#      - Be careful with indexing
+Time: O(n)
+Space: O(n)
+
+Hint:
+    - Use 4 loops (move right, go down, move left, go up)
+    - Be careful with indexing
+"""
 
 def spiral_traverse(array: list) -> list:
     if len(array) == 1:

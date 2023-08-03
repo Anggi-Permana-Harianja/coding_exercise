@@ -1,0 +1,30 @@
+Array
+    - Easy
+        - Two Sum (two_sum.py)
+        - Best Time to Buy and Sell Stock (best_time_buy_and_sell_stock.py)
+        - Majority Element (majority_element.py)
+        - Contains duplicate (contains_duplicate.py)
+    - Medium
+        - Insert Interval
+        - 3Sum (three_sum.py)
+        - Product of Array Except Self 
+        - Combination Sum 
+        - Merge Intervals
+        - Sort Colors
+        - Container With Most Water
+String
+    - Easy
+        - Valid Palindrome (valid_palindrome.py)
+        - Valid Anagram (valid_anagram.py)
+        - Longest Palindrome (longest_palindrome.py)
+    - Medium 
+        - Longest Substring Without Repeating Characters
+        - String to Integer (atoi)
+        - Longest Palindromic Substring
+        - Find All Anagrams in a String
+    - Hard
+        - Minimum Window Substring
+Matrix
+    - Easy
+        - Spiral Matrix (spiral_traverse.py)
+
