@@ -26,7 +26,7 @@ def max_profit(prices:list[int]) -> int:
         min_value = min(min_value, prices[i])
         max_profit = max(max_profit, (prices[i] - min_value))
         
-    return max_profit if max_profit > 0 else 0
+    return max_profit
 
 
 import unittest
