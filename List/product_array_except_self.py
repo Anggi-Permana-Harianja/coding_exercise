@@ -12,7 +12,7 @@ Time: O(N)
 Space: O(N)
 
 Hint:
-    - use sliding window both ends and then add
+    - use sliding window both ends and then multiple nums from left and right
 """
 
 from typing import List
