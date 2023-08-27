@@ -1,7 +1,12 @@
-#Link: https://leetcode.com/problems/balanced-binary-tree/
+"""
+Blind 75
+https://leetcode.com/problems/balanced-binary-tree/
 
-#Time O(N log N)
-#Space O(N)
+Given a binary tree, determine if it is height-balanced
+
+Time: O(N) because we traverse each node once
+Space: O(depth)
+"""
 
 class Node:
     def __init__(self, val):
