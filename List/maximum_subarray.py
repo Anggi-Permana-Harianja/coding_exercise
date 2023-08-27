@@ -1,16 +1,18 @@
-# Link: https://leetcode.com/problems/maximum-subarray/
+"""
+Link: https://leetcode.com/problems/maximum-subarray/
 
-#53. Maximum Subarray
+53. Maximum Subarray
 
-#Given an integer array nums, find the contiguous subarray (containing at least one number)
-#which has the largest sum and return its sum.
+Given an integer array nums, find the contiguous subarray (containing at least one number)
+which has the largest sum and return its sum.
 
-#A subarray is a contiguous part of an array.
+A subarray is a contiguous part of an array.
 
-#HINT: This question can be solved using Kadane algorithm
+HINT: This question can be solved using Kadane algorithm
 
-#Time: O(N)
-#Space: O(1)
+Time: O(N)
+Space: O(1)
+"""
 
 def max_subarray(nums:list[int]) -> int:
     largest_so_far = nums[0]
