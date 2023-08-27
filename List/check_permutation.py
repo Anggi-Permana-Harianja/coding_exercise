@@ -4,13 +4,15 @@ Cracking Coding Interview 1.2
 Check Permutation: Given two strings, write a method to decide if one is a permutation of the
 other.
 
-Time:
-Space:
+Time: O(N)
+Space: O(N)
 
 This can be solved with two approaches
 - sort the string, and then compare if both are similar
 - check if the two strings have identical character counts.
 """
+
+import unittest
 
 def sort_string(string: str) -> str:
     sorted_string = sorted(string)
@@ -31,10 +33,7 @@ def check_permutation_using_dict(string1: str, string2: str) -> bool:
     dict_chars = {}
     # add all chars from string1 to a dict
     for char in string1:
-        if char not in dict_chars:
-            dict_chars[char] = 1
-        else:
-            dict_chars[char] += 1
+        dict_chars[char] = dict_chars.get(char, 0) + 1
 
     # for string2 we deduct, if reach < 0 means not permutation
     for char in string2:
@@ -43,8 +42,6 @@ def check_permutation_using_dict(string1: str, string2: str) -> bool:
         if dict_chars[char] < 0: return False
 
     return True
-
-import unittest
 
 class TestCases(unittest.TestCase):
     def test_case1(self):
