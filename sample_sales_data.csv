@@ -1,0 +1,6 @@
+Order ID,Product,Category,Quantity,Price,Discount,Order Date,Region
+101,Apple iPhone,Electronics,2,999,0.1,2024-01-01,North
+102,Samsung TV,Electronics,1,499,0.15,2024-01-03,South
+103,HP Laptop,Electronics,1,799,0.05,2024-01-05,East
+104,Office Chair,Furniture,4,120,0.2,2024-01-10,West
+105,Wooden Desk,Furniture,2,300,0.1,2024-01-15,North
